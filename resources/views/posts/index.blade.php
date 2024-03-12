@@ -9,6 +9,7 @@
     </head>
     <body class="antialiased">
         <h1>みんなが選ぶおすすめゲーム</h1>
+        <a href='/posts/create'>create</a>
         <div class='posts'>
             @foreach($posts as $post)
             <div class='post'>
