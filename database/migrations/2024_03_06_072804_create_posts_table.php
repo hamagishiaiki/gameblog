@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('title' , 50);
             $table->string('body' , 400);
             $table->integer('difficult');
-            $table->string('image_path' , 100);
+            $table->string('image_path')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

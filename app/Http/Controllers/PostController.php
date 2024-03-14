@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Http\Requests\PostRequest;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Category;
 
 class PostController extends Controller
 {
@@ -15,8 +18,19 @@ class PostController extends Controller
     {
         return view('posts.show')->with(['post' => $post]);
     }
-    public function create()
+    public function store(Post $post,PostRequest $request)
     {
-        return view('posts.create');
+        $input = $request['post'];
+        if($request->file('image')){
+            $image_url = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
+            $input += ['image_url' => $image_url];
+        }
+        $post = new Post();
+        $post->fill($input)->save();
+        return redirect('/posts/' . $post->id);
+    }
+    public function create(Category $category)
+    {
+        return view('posts.create')->with(['categories' => $category->get()]);
     }
 }
