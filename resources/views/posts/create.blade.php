@@ -9,7 +9,7 @@
     </head>
     <body class="antialiased">
        <h1>投稿</h1>
-       <form action='/posts' method='POST'>
+       <form action='/posts' method='POST' enctype='multipart/form-data'>
            @csrf
            <div class='title'>
                <h2>タイトル</h2>
@@ -40,6 +40,9 @@
                 <select name="post[difficult]">
                     <option value=0>0</option>
                 </select>
+            </div>
+            <div class="image w-0.5">
+                <input type="file" name="image">
             </div>
            <input type="hidden" name="post[user_id]" value="{{ Auth::id() }}">
            <input type='submit' value='投稿'>

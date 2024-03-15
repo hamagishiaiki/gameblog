@@ -28,8 +28,8 @@ class PostSeeder extends Seeder
                 'image_path' => 'aaa',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
-         ]);
-          DB::table('posts')->insert([
+        ]);
+        DB::table('posts')->insert([
                 'user_id' => 1,
                 'category_id' => 1,
                 'evaluate' => 5,
@@ -39,6 +39,61 @@ class PostSeeder extends Seeder
                 'image_path' => 'aaa',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
-         ]);
+        ]);
+        DB::table('posts')->insert([
+                'user_id' => 1,
+                'category_id' => 1,
+                'evaluate' => 3,
+                'title' => 'マリオ',
+                'body' => 'おもしろい',
+                'difficult' => 5,
+                'image_path' => 'aaa',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+        ]);
+        DB::table('posts')->insert([
+                'user_id' => 1,
+                'category_id' => 1,
+                'evaluate' => 3,
+                'title' => 'マリオ',
+                'body' => 'おもしろい',
+                'difficult' => 5,
+                'image_path' => 'aaa',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+        ]);
+        DB::table('posts')->insert([
+                'user_id' => 1,
+                'category_id' => 1,
+                'evaluate' => 1,
+                'title' => 'スプラ',
+                'body' => 'おもしろい',
+                'difficult' => 5,
+                'image_path' => 'aaa',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+        ]);
+        DB::table('posts')->insert([
+                'user_id' => 1,
+                'category_id' => 1,
+                'evaluate' => 1,
+                'title' => 'スプラ',
+                'body' => 'おもしろい',
+                'difficult' => 5,
+                'image_path' => 'aaa',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+        ]);
+        DB::table('posts')->insert([
+                'user_id' => 1,
+                'category_id' => 1,
+                'evaluate' => 0,
+                'title' => 'ゼルダ',
+                'body' => 'おもしろい',
+                'difficult' => 5,
+                'image_path' => 'aaa',
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+        ]);
     }
 }
