@@ -23,16 +23,20 @@ class CategorySeeder extends Seeder
                 'name' => 'SWITCH',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
-            ],
+            ]
+        );
+         DB::table('categories')->insert(
             [
-                'name' => 'PlaiStation',
+                'name' => 'PlayStation',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
             ],
+        );
+         DB::table('categories')->insert(
             [
                 'name' => 'スマホゲーム',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
-            ]);
+        ]);
     }
 }

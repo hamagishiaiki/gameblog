@@ -10,6 +10,9 @@
     <body class="antialiased">
         <h1>みんなが選ぶおすすめゲーム</h1>
         <a href='/posts/create'>create</a>
+        @foreach($sortedData as $data)
+            {{$data->title}}
+            @endforeach
         <div class='posts'>
             @foreach($posts as $post)
             <div class='post'>
@@ -34,6 +37,9 @@
             <div class="difficult">
                 <h2>difficult</h2>
                 <p class='difficult'>{{ $post->difficult }}</p>
+            </div>
+            <div class="image w-0.5">
+                <img src="{{ $post->image_path }}" alt="画像が読み込めません。"/>
             </div>
             @endforeach
         </div>

@@ -29,6 +29,9 @@
                 <h2>difficult</h2>
                 <p class='difficult'>{{ $post->difficult }}</p>
             </div>
+            <div class="image w-0.5">
+                <img src="{{ $post->image_path }}" alt="画像が読み込めません。"/>
+            </div>
         <div class="edit">
             <a href="/posts/{{ $post->id }}/edit">編集</a>
             </div>

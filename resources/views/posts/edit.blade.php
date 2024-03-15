@@ -34,6 +34,7 @@
                 <h2>evaluate</h2>
                 <select name="post[evaluate]">
                     <option value=0>0</option>
+                    <option value=1>1</option>
                 </select>
             </div>
             <div class="difficult">
