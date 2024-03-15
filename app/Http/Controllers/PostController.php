@@ -43,4 +43,9 @@ class PostController extends Controller
     {
         return view('posts.create')->with(['categories' => $category->get()]);
     }
+    public function delete(Post $post)
+    {
+        $post->delete();
+        return redirect('/');
+    }
 }
