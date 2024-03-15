@@ -17,6 +17,21 @@
                 <p class='body'>{{ $post->body }}</p>
             </div>
         </div>
+        <div class="category">
+                <h2>Category</h2>
+                <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
+            </div>
+            <div class="evaluate">
+                <h2>evaluate</h2>
+                <p class='evaluate'>{{ $post->evaluate }}</p>
+            </div>
+            <div class="difficult">
+                <h2>difficult</h2>
+                <p class='difficult'>{{ $post->difficult }}</p>
+            </div>
+        <div class="edit">
+            <a href="/posts/{{ $post->id }}/edit">編集</a>
+            </div>
         <div class='footer'>
             <a href='/'>戻る</a>
         </div>
